@@ -4,71 +4,126 @@
   <meta charset="utf-8">
   <title>Valiant Guardian Ministries</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-  body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:#f2f2f2;
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:#f2f2f2;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-    background-image: url("bg-haven.jpg");
-}
+      /* Background image */
+      background-image:url("bg-haven.jpg");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+    }
 
-/* Dark overlay so text stays readable */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background: rgba(0,0,0,0.72);
-  pointer-events:none;
-  z-index:-1;
-}
-    r-spacing: 1px; }
-    .subtitle { color: #bdbdbd; margin-bottom: 30px; }
-    .nav {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 15px;
+    /* Dark overlay so text stays readable */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.72);
+      pointer-events:none;
+      z-index:-1;
     }
-    .nav a {
-      border: 2px solid #2a2a2f;
-      padding: 16px;
-      border-radius: 14px;
-      text-decoration: none;
-      color: #f2f2f2;
-      background: #0f0f12;
-      font-weight: bold;
+
+    /* Center everything on the page */
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;   /* horizontal center */
+      align-items:center;       /* vertical center */
+      padding:26px;
+      box-sizing:border-box;
     }
-    .nav a:hover { border-color: #f2f2f2; }
-    footer {
-      margin-top: 25px;
-      font-size: 12px;
-      color: #888;
+
+    /* Main card container (what you want centered) */
+    .container{
+      width:100%;
+      max-width:1000px;
+      text-align:center;
+      border:2px solid #2a2a2f;
+      border-radius:18px;
+      background:#111114;
+      padding:26px;
+      box-sizing:border-box;
+    }
+
+    h1{
+      margin:10px 0 6px;
+      letter-spacing:1px;
+      font-size:40px;
+    }
+
+    .subtitle{
+      color:#bdbdbd;
+      margin:0 0 22px;
+    }
+
+    /* Nav buttons centered */
+    .nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:15px;
+      margin-top:18px;
+    }
+
+    .nav a{
+      border:2px solid #2a2a2f;
+      padding:16px 18px;
+      border-radius:14px;
+      text-decoration:none;
+      color:#f2f2f2;
+      background:#0f0f12;
+      font-weight:bold;
+      min-width:160px;
+      text-align:center;
+      box-sizing:border-box;
+    }
+
+    .nav a:hover{
+      border-color:#f2f2f2;
+    }
+
+    footer{
+      margin-top:22px;
+      font-size:12px;
+      color:#888;
+    }
+
+    /* Logo styling */
+    .logo{
+      width:120px;
+      margin-bottom:14px;
+      opacity:0.95;
+      display:inline-block;
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <img src="logo.png" alt="Valiant Guardian Ministries Logo" style="
-  width:120px;
-  margin-bottom:14px;
-  opacity:0.95;
-">
+  <div class="wrap">
+    <div class="container">
 
-<h1>The Haven</h1>
-<p>Valiant Guardian Ministries</p>
-    <div class="nav">
-      <a href="offering.html">Offering</a>
-      <a href="oath.html">Oath</a>
-      <a href="forge.html">Forge</a>
-      <a href="training-ground.html">Training Ground</a>
-      <a href="armory.html">Armory</a>
+      <img class="logo" src="logo.png" alt="Valiant Guardian Ministries Logo">
+
+      <h1>The Haven</h1>
+      <p class="subtitle">Valiant Guardian Ministries</p>
+
+      <div class="nav">
+        <a href="offering.html">Offering</a>
+        <a href="oath.html">Oath</a>
+        <a href="forge.html">Forge</a>
+        <a href="training-ground.html">Training Ground</a>
+        <a href="armory.html">Armory</a>
+      </div>
+
+      <footer>© 2026 Valiant Guardian Ministries</footer>
+
     </div>
-
-    <footer>© 2026 Valiant Guardian Ministries</footer>
   </div>
 </body>
 </html>
