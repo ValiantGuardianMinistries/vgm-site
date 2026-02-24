@@ -18,6 +18,7 @@
   </style>
 </head>
 <body>
+  <script type="module" src="https://donorbox.org/widgets.js" async></script>
   <div class="wrap">
     <div class="nav">
       <a href="index.html">← The Haven</a>
@@ -37,14 +38,21 @@
     <div class="card">
       <h2 style="margin-top:0;">Donate</h2>
       <p>
-    <p>
-  Giving is handled securely through Donorbox.
+  Giving is handled securely through Donorbox. Your support helps Valiant Guardian Ministries
+  continue creating discipleship resources rooted in Scripture, virtue, and faithful formation.
 </p>
 
-<a class="btn" href="PASTE_YOUR_DONORBOX_LINK_HERE" target="_blank" rel="noopener">
-  Donate via Donorbox
-</a>
+<p class="muted">
+  Valiant Guardian Ministries is a registered nonprofit. Donations are used to further the mission
+  of discipleship, education, and community formation.
+</p>
 
+<dbox-widget
+  campaign="valiant-guardian-ministries"
+  type="donation_form"
+  interval="1 M"
+  enable-auto-scroll="true">
+</dbox-widget>
       <p style="margin-top:14px;">
         Prefer to give by check or have questions? Go to <a href="oath.html" style="text-decoration:underline;">Oath</a> for contact info.
       </p>
