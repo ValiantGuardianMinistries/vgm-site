@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Devotionals • Forge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:#f2f2f2;
+
+      /* Forge background */
+      background-image:url("bg-forge.jpg");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+    }
+
+    /* Dark overlay for readability */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.72);
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    .wrap{
+      max-width:900px;
+      margin:0 auto;
+      padding:26px;
+      box-sizing:border-box;
+    }
+
+    .nav a{
+      display:inline-block;
+      margin:6px 8px 0 0;
+      padding:10px 14px;
+      border:2px solid #2a2a2f;
+      border-radius:999px;
+      text-decoration:none;
+      color:#f2f2f2;
+      background:#0f0f12;
+      font-weight:bold;
+    }
+    .nav a:hover{border-color:#f2f2f2;}
+
+    .card{
+      margin-top:18px;
+      border:2px solid #2a2a2f;
+      border-radius:18px;
+      background:#111114;
+      padding:22px;
+      box-sizing:border-box;
+      text-align:center;
+    }
+
+    h1,h2{margin:0 0 10px;}
+    p{color:#bdbdbd;line-height:1.6;}
+    .muted{color:#8f8f8f;}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="nav">
+      <a href="forge.html">← Forge</a>
+      <a href="index.html">The Haven</a>
+    </div>
+
+    <div class="card">
+      <h1>Devotionals</h1>
+      <p class="muted">
+        Short-form spiritual formation rooted in Scripture and faithful practice.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Coming Soon</h2>
+      <p>
+        We are prayerfully developing devotionals designed to help believers
+        walk daily in faith, virtue, and obedience to Christ.
+      </p>
+      <p class="muted">
+        These will be released intentionally, with clarity, depth, and biblical faithfulness.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
