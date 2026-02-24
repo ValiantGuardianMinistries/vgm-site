@@ -4,22 +4,90 @@
   <meta charset="utf-8">
   <title>Offering • VGM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-    body{margin:0; font-family:Arial,Helvetica,sans-serif; background:#0b0b0c; color:#f2f2f2;}
-    .wrap{max-width:950px; margin:0 auto; padding:26px;}
-    .nav a{display:inline-block; margin:6px 8px 0 0; padding:10px 14px; border:2px solid #2a2a2f; border-radius:999px; text-decoration:none; color:#f2f2f2; background:#0f0f12;}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:#f2f2f2;
+
+      /* Background image */
+      background-image:url("bg-offering.jpg");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+    }
+
+    /* Dark overlay for readability */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.72);
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    .wrap{
+      max-width:950px;
+      margin:0 auto;
+      padding:26px;
+      box-sizing:border-box;
+    }
+
+    .nav a{
+      display:inline-block;
+      margin:6px 8px 0 0;
+      padding:10px 14px;
+      border:2px solid #2a2a2f;
+      border-radius:999px;
+      text-decoration:none;
+      color:#f2f2f2;
+      background:#0f0f12;
+      font-weight:bold;
+    }
+
     .nav a:hover{border-color:#f2f2f2;}
-    .card{margin-top:18px; border:2px solid #2a2a2f; border-radius:18px; background:#111114; padding:18px;}
-    h1{margin:0 0 8px;}
-    p{color:#bdbdbd; line-height:1.6;}
-    .btn{display:inline-block; margin:8px 10px 0 0; padding:12px 16px; border:2px solid #2a2a2f; border-radius:14px; background:#0f0f12; text-decoration:none; color:#f2f2f2; font-weight:bold;}
+
+    .card{
+      margin-top:18px;
+      border:2px solid #2a2a2f;
+      border-radius:18px;
+      background:#111114;
+      padding:18px;
+      box-sizing:border-box;
+    }
+
+    h1,h2{margin:0 0 10px;}
+    p{color:#bdbdbd;line-height:1.6;}
+    .muted{color:#8f8f8f;}
+
+    .btn{
+      display:inline-block;
+      margin-top:10px;
+      padding:14px 18px;
+      border:2px solid #2a2a2f;
+      border-radius:14px;
+      background:#0f0f12;
+      text-decoration:none;
+      color:#f2f2f2;
+      font-weight:bold;
+    }
+
     .btn:hover{border-color:#f2f2f2;}
-    code{background:#0f0f12; padding:2px 6px; border-radius:8px; border:1px solid #2a2a2f;}
+
+    iframe{
+      border-radius:12px;
+      border:none;
+      width:100%;
+    }
   </style>
 </head>
+
 <body>
-  <script type="module" src="https://donorbox.org/widgets.js" async></script>
   <div class="wrap">
+
     <div class="nav">
       <a href="index.html">← The Haven</a>
       <a href="oath.html">Oath</a>
@@ -30,33 +98,42 @@
 
     <div class="card">
       <h1>Offering</h1>
-      <p>
-        Thank you for supporting Valiant Guardian Ministries. Your giving helps create resources that form a generation of guardians, fortified by the Word.
+      <p class="muted">
+        Supporting the mission of Valiant Guardian Ministries
       </p>
     </div>
 
     <div class="card">
-      <h2 style="margin-top:0;">Donate</h2>
+      <h2>Why We Give</h2>
       <p>
-  Giving is handled securely through Donorbox. Your support helps Valiant Guardian Ministries
-  continue creating discipleship resources rooted in Scripture, virtue, and faithful formation.
-</p>
-
-<p class="muted">
-  Valiant Guardian Ministries is a registered nonprofit. Donations are used to further the mission
-  of discipleship, education, and community formation.
-</p>
-
-<dbox-widget
-  campaign="valiant-guardian-ministries"
-  type="donation_form"
-  interval="1 M"
-  enable-auto-scroll="true">
-</dbox-widget>
-      <p style="margin-top:14px;">
-        Prefer to give by check or have questions? Go to <a href="oath.html" style="text-decoration:underline;">Oath</a> for contact info.
+        Thank you for supporting Valiant Guardian Ministries. Your generosity helps create
+        discipleship resources rooted in Scripture, virtue, and faithful formation.
+      </p>
+      <p>
+        Giving allows us to teach, train, and equip believers to stand firm in truth and
+        live courageously for Christ.
       </p>
     </div>
+
+    <div class="card">
+      <h2>Donate</h2>
+      <p class="muted">
+        Giving is handled securely through Donorbox.
+      </p>
+
+      <!-- Donorbox embed -->
+      <script type="module" src="https://donorbox.org/widgets.js" async></script>
+      <dbox-widget
+        campaign="valiant-guardian-ministries"
+        type="donation_form"
+        enable-auto-scroll="true">
+      </dbox-widget>
+
+      <p class="muted" style="margin-top:14px;">
+        Prefer to give by check or have questions? Visit <a href="oath.html" style="text-decoration:underline;">Oath</a> for contact information.
+      </p>
+    </div>
+
   </div>
 </body>
 </html>
