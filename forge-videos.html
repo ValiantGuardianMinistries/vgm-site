@@ -5,60 +5,30 @@
   <title>Forge • Video Lessons</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      background:#0b0b0c;
-      color:#f2f2f2;
-    }
-    .wrap{
-      max-width:1000px;
-      margin:0 auto;
-      padding:26px;
-    }
-    .nav a{
-      display:inline-block;
-      margin:6px 8px 0 0;
-      padding:10px 14px;
-      border:2px solid #2a2a2f;
-      border-radius:999px;
-      text-decoration:none;
-      color:#f2f2f2;
-      background:#0f0f12;
-    }
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b0b0c;color:#f2f2f2;}
+    .wrap{max-width:1000px;margin:0 auto;padding:26px;}
+    .nav a{display:inline-block;margin:6px 8px 0 0;padding:10px 14px;border:2px solid #2a2a2f;border-radius:999px;text-decoration:none;color:#f2f2f2;background:#0f0f12;}
     .nav a:hover{border-color:#f2f2f2;}
-    .card{
-      margin-top:18px;
+    .card{margin-top:18px;border:2px solid #2a2a2f;border-radius:18px;background:#111114;padding:18px;}
+    h1,h2{margin:0 0 10px;}
+    p{color:#bdbdbd;line-height:1.6;}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px;}
+    @media (max-width:900px){.grid{grid-template-columns:1fr;}}
+    .tile{
+      display:block;
       border:2px solid #2a2a2f;
       border-radius:18px;
-      background:#111114;
-      padding:18px;
+      background:#0f0f12;
+      padding:16px;
+      text-decoration:none;
+      color:#f2f2f2;
     }
-    h1,h2,h3{margin:0 0 10px;}
-    p{color:#bdbdbd;line-height:1.6;}
+    .tile:hover{border-color:#f2f2f2;}
     .muted{color:#8f8f8f;}
-
-    /* Responsive video wrapper */
-    .video{
-      position:relative;
-      width:100%;
-      padding-top:56.25%;
-      margin-top:12px;
-    }
-    .video iframe{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      border:0;
-      border-radius:12px;
-    }
   </style>
 </head>
-
 <body>
   <div class="wrap">
-
     <div class="nav">
       <a href="forge.html">← Forge</a>
       <a href="index.html">The Haven</a>
@@ -66,88 +36,35 @@
 
     <div class="card">
       <h1>Forge — Video Lessons</h1>
-      <p>
-        Teaching, training, and formation through Scripture, theology, and cultural engagement.
-      </p>
-    </div>
+      <p class="muted">Choose a category to view series and lessons.</p>
 
-    <!-- THEOLOGY -->
-    <div class="card">
-      <h2>Theology</h2>
-      <p class="muted">
-        Biblical foundations, doctrine, and deep dives into the Word.
-      </p>
+      <div class="grid">
+        <a class="tile" href="videos-vgm.html">
+          <h2>VGM Series</h2>
+          <p class="muted">Core discipleship and formation lessons.</p>
+        </a>
 
-      <h3>Identity</h3>
-      <p>
-        What does the Bible say about how we should identify ourselves?
-      </p>
+        <a class="tile" href="videos-theology.html">
+          <h2>Theology</h2>
+          <p class="muted">Doctrine, Scripture deep dives, foundations.</p>
+        </a>
 
-      <div class="video">
-        <iframe
-          src="https://www.youtube.com/embed/a1hs8KKnOiY"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <a class="tile" href="videos-culture.html">
+          <h2>Culture</h2>
+          <p class="muted">Cultural engagement through a biblical lens.</p>
+        </a>
+
+        <a class="tile" href="videos-jv.html">
+          <h2>Justice vs. Valor</h2>
+          <p class="muted">Clarifying courage, virtue, and faithful action.</p>
+        </a>
+
+        <a class="tile" href="videos-current-events.html">
+          <h2>Current Events</h2>
+          <p class="muted">Applying Scripture to the world right now.</p>
+        </a>
       </div>
     </div>
-
-    <!-- VALIANT GUARDIAN SERIES -->
-    <div class="card">
-      <h2>Valiant Guardian Series</h2>
-      <p class="muted">
-        Core teachings on identity, discipleship, virtue, and living faithfully as a Valiant Guardian.
-      </p>
-
-      <h3>VGM Session 1</h3>
-      <p>
-        Introduction to the heart, mission, and calling of the Valiant Guardian.
-      </p>
-      <div class="video">
-        <iframe
-          src="https://www.youtube.com/embed/YFm0LcdFugc"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <h3>VGM Session 2</h3>
-      <p>
-        What is the heart, and how do we honor God with it?
-      </p>
-      <div class="video">
-        <iframe
-          src="https://www.youtube.com/embed/rtZcd0EByeo"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <h3>VGM Session 3</h3>
-      <p>
-        What is the soul? How does one receive a God-honoring soul?
-      </p>
-      <div class="video">
-        <iframe
-          src="https://www.youtube.com/embed/G4VK1Pl2JIo"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <h3>VGM Session 4</h3>
-      <p>
-        How do you serve God with your mind?
-      </p>
-      <div class="video">
-        <iframe
-          src="https://www.youtube.com/embed/ugaLPniKQYw"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-
   </div>
 </body>
 </html>
