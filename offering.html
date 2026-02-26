@@ -82,6 +82,18 @@
       border:none;
       width:100%;
     }
+
+    .widget-wrap{
+      width:100%;
+      box-sizing:border-box;
+      margin-top:14px;
+      border-radius:14px;
+      overflow:hidden;
+    }
+
+    @media (max-width:600px){
+      body{background-attachment:scroll;}
+    }
   </style>
 </head>
 
@@ -123,11 +135,14 @@
 
       <!-- Donorbox embed -->
       <script type="module" src="https://donorbox.org/widgets.js" async></script>
-      <dbox-widget
-        campaign="valiant-guardian-ministries"
-        type="donation_form"
-        enable-auto-scroll="true">
-      </dbox-widget>
+      <div class="widget-wrap">
+        <dbox-widget
+          campaign="valiant-guardian-ministries"
+          type="donation_form"
+          enable-auto-scroll="true"
+          style="display:block;max-width:100%;width:100%;">
+        </dbox-widget>
+      </div>
 
       <p class="muted" style="margin-top:14px;">
         Prefer to give by check or have questions? Visit <a href="oath.html" style="text-decoration:underline;">Oath</a> for contact information.
