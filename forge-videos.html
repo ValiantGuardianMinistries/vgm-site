@@ -4,46 +4,23 @@
   <meta charset="utf-8">
   <title>Forge • Video Lessons</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b0b0c;color:#f2f2f2;}
-    .wrap{max-width:1000px;margin:0 auto;padding:26px;}
-    .nav a{display:inline-block;margin:6px 8px 0 0;padding:10px 14px;border:2px solid #2a2a2f;border-radius:999px;text-decoration:none;color:#f2f2f2;background:#0f0f12;}
-    .nav a:hover{border-color:#f2f2f2;}
-    .card{margin-top:18px;border:2px solid #2a2a2f;border-radius:18px;background:#111114;padding:18px;}
-    h1,h2{margin:0 0 10px;}
-    p{color:#bdbdbd;line-height:1.6;}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px;}
-    @media (max-width:900px){.grid{grid-template-columns:1fr;}}
-    .tile{
-      display:block;
-      border:2px solid #2a2a2f;
-      border-radius:18px;
-      background:#0f0f12;
-      padding:16px;
-      text-decoration:none;
-      color:#f2f2f2;
-    }
-    .tile:hover{border-color:#f2f2f2;}
-    .muted{color:#8f8f8f;}
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="wrap">
-    <div class="nav">
+<body class="room-forge" style="--bg-image:url('bg-forge.jpg');">
+  <main class="shell">
+    <nav class="site-nav">
       <a href="forge.html">← Forge</a>
       <a href="index.html">The Haven</a>
-    </div>
+    </nav>
 
-    <div class="card">
+    <section class="card">
       <h1>Forge — Video Lessons</h1>
       <p class="muted">Choose a category to view series and lessons.</p>
-
-      <div class="grid">
+      <div class="grid three mt-14">
         <a class="tile" href="videos-vgm.html">
           <h2>VGM Series</h2>
           <p class="muted">Core discipleship and formation lessons.</p>
         </a>
-
         <a class="tile" href="videos-theology.html">
           <h2>Theology</h2>
           <p class="muted">Doctrine, Scripture deep dives, foundations.</p>
@@ -53,7 +30,7 @@
           <p class="muted">Clarifying courage, virtue, and faithful action.</p>
         </a>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 </body>
 </html>

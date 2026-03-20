@@ -4,118 +4,24 @@
   <meta charset="utf-8">
   <title>Offering • VGM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      color:#f2f2f2;
-
-      /* Background image */
-      background-image:url("bg-offering1.jpg");
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
-      background-attachment:fixed;
-    }
-
-    /* Dark overlay for readability */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,0.72);
-      pointer-events:none;
-      z-index:-1;
-    }
-
-    .wrap{
-      max-width:950px;
-      margin:0 auto;
-      padding:26px;
-      box-sizing:border-box;
-    }
-
-    .nav a{
-      display:inline-block;
-      margin:6px 8px 0 0;
-      padding:10px 14px;
-      border:2px solid #2a2a2f;
-      border-radius:999px;
-      text-decoration:none;
-      color:#f2f2f2;
-      background:#0f0f12;
-      font-weight:bold;
-    }
-
-    .nav a:hover{border-color:#f2f2f2;}
-
-    .card{
-      margin-top:18px;
-      border:2px solid #2a2a2f;
-      border-radius:18px;
-      background:#111114;
-      padding:18px;
-      box-sizing:border-box;
-    }
-
-    h1,h2{margin:0 0 10px;}
-    p{color:#bdbdbd;line-height:1.6;}
-    .muted{color:#8f8f8f;}
-
-    .btn{
-      display:inline-block;
-      margin-top:10px;
-      padding:14px 18px;
-      border:2px solid #2a2a2f;
-      border-radius:14px;
-      background:#0f0f12;
-      text-decoration:none;
-      color:#f2f2f2;
-      font-weight:bold;
-    }
-
-    .btn:hover{border-color:#f2f2f2;}
-
-    iframe{
-      border-radius:12px;
-      border:none;
-      width:100%;
-    }
-
-    .widget-wrap{
-      width:100%;
-      box-sizing:border-box;
-      margin-top:14px;
-      border-radius:14px;
-      overflow:hidden;
-    }
-
-    @media (max-width:600px){
-      body{background-attachment:scroll;}
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
-  <div class="wrap">
-
-    <div class="nav">
+<body class="room-offering" style="--bg-image:url('bg-offering1.jpg');">
+  <main class="shell">
+    <nav class="site-nav">
       <a href="index.html">← The Haven</a>
       <a href="oath.html">Oath</a>
       <a href="forge.html">Forge</a>
       <a href="training-ground.html">Training Ground</a>
       <a href="armory.html">Armory</a>
-    </div>
+    </nav>
 
-    <div class="card">
+    <section class="card">
       <h1>Offering</h1>
-      <p class="muted">
-        Supporting the mission of Valiant Guardian Ministries
-      </p>
-    </div>
+      <p class="muted">Supporting the mission of Valiant Guardian Ministries</p>
+    </section>
 
-    <div class="card">
+    <section class="card">
       <h2>Why We Give</h2>
       <p>
         Thank you for supporting Valiant Guardian Ministries. Your generosity helps create
@@ -125,15 +31,12 @@
         Giving allows us to teach, train, and equip believers to stand firm in truth and
         live courageously for Christ.
       </p>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="card">
       <h2>Donate</h2>
-      <p class="muted">
-        Giving is handled securely through Donorbox.
-      </p>
+      <p class="muted">Giving is handled securely through Donorbox.</p>
 
-      <!-- Donorbox embed -->
       <script type="module" src="https://donorbox.org/widgets.js" async></script>
       <div class="widget-wrap">
         <dbox-widget
@@ -144,11 +47,10 @@
         </dbox-widget>
       </div>
 
-      <p class="muted" style="margin-top:14px;">
-        Prefer to give by check or have questions? Visit <a href="oath.html" style="text-decoration:underline;">Oath</a> for contact information.
+      <p class="muted mt-14">
+        Prefer to give by check or have questions? Visit <a class="underline-link" href="oath.html">Oath</a> for contact information.
       </p>
-    </div>
-
-  </div>
+    </section>
+  </main>
 </body>
 </html>
