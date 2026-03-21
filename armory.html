@@ -4,115 +4,36 @@
   <meta charset="utf-8">
   <title>Armory • VGM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      color:#f2f2f2;
-
-      /* Background image */
-      background-image:url("bg-armory.jpg");
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
-      background-attachment:fixed;
-    }
-
-    /* Dark overlay for readability */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,0.72);
-      pointer-events:none;
-      z-index:-1;
-    }
-
-    .wrap{
-      max-width:980px;
-      margin:0 auto;
-      padding:26px;
-      box-sizing:border-box;
-    }
-
-    .nav a{
-      display:inline-block;
-      margin:6px 8px 0 0;
-      padding:10px 14px;
-      border:2px solid #2a2a2f;
-      border-radius:999px;
-      text-decoration:none;
-      color:#f2f2f2;
-      background:#0f0f12;
-      font-weight:bold;
-    }
-
-    .nav a:hover{border-color:#f2f2f2;}
-
-    .card{
-      margin-top:18px;
-      border:2px solid #2a2a2f;
-      border-radius:18px;
-      background:#111114;
-      padding:18px;
-      box-sizing:border-box;
-    }
-
-    h1,h2{margin:0 0 10px;}
-    p,li{color:#bdbdbd;line-height:1.6;}
-    .muted{color:#8f8f8f;}
-
-    .pill{
-      display:inline-block;
-      margin:6px 8px 0 0;
-      padding:10px 14px;
-      border:2px solid #2a2a2f;
-      border-radius:999px;
-      background:#0f0f12;
-      text-decoration:none;
-      color:#f2f2f2;
-      font-weight:bold;
-    }
-
-    .pill:hover{border-color:#f2f2f2;}
-
-    @media (max-width:600px){
-      body{background-attachment:scroll;}
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
-  <div class="wrap">
-
-    <div class="nav">
+<body style="--page-bg: url('bg-armory.jpg');">
+  <main class="site-shell">
+    <nav class="top-nav" aria-label="Primary">
       <a href="index.html">← The Haven</a>
       <a href="oath.html">Oath</a>
       <a href="offering.html">Offering</a>
       <a href="forge.html">Forge</a>
       <a href="training-ground.html">Training Ground</a>
-    </div>
+    </nav>
 
-    <div class="card">
+    <section class="hero">
       <h1>The Armory</h1>
-      <p class="muted">
-        Merch and tools that reinforce devotion to higher authority — coming soon.
-      </p>
-    </div>
+      <p class="subtitle">Merch and tools that reinforce devotion to higher authority — coming soon.</p>
+    </section>
 
-    <div class="card">
+    <section class="section stack">
       <h2>Coming Soon</h2>
       <p>
         The Armory will be the future home of VGM merch — clothing and accessories designed
         to reflect identity, courage, and devotion to Christ.
       </p>
-      <p class="muted">
-        We’re prioritizing quality and mission alignment before releasing products.
-      </p>
-    </div>
+      <p class="muted">We’re prioritizing quality and mission alignment before releasing products.</p>
+    </section>
 
-    <div class="card">
+    <section class="section stack">
       <h2>Vision</h2>
       <p>
         The idea is to create “armor” — items that remind you who you are and what you stand for:
@@ -123,8 +44,7 @@
         <li>Clean designs (OT-style minimal)</li>
         <li>Quality over hype</li>
       </ul>
-    </div>
-
-  </div>
+    </section>
+  </main>
 </body>
 </html>

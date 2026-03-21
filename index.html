@@ -4,130 +4,40 @@
   <meta charset="utf-8">
   <title>Valiant Guardian Ministries</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      color:#f2f2f2;
-
-      /* Background image */
-      background-image:url("bg-haven.jpg");
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
-      background-attachment:fixed;
-    }
-
-    /* Dark overlay so text stays readable */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,0.72);
-      pointer-events:none;
-      z-index:-1;
-    }
-
-    /* Center everything on the page */
-    .wrap{
-      min-height:100vh;
-      display:flex;
-      justify-content:center;   /* horizontal center */
-      align-items:center;       /* vertical center */
-      padding:26px;
-      box-sizing:border-box;
-    }
-
-    /* Main card container (what you want centered) */
-    .container{
-      width:100%;
-      max-width:1000px;
-      text-align:center;
-      border:2px solid #2a2a2f;
-      border-radius:18px;
-      background:#111114;
-      padding:26px;
-      box-sizing:border-box;
-    }
-
-    h1{
-      margin:10px 0 6px;
-      letter-spacing:1px;
-      font-size:40px;
-    }
-
-    .subtitle{
-      color:#bdbdbd;
-      margin:0 0 22px;
-    }
-
-    /* Nav buttons centered */
-    .nav{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:15px;
-      margin-top:18px;
-    }
-
-    .nav a{
-      border:2px solid #2a2a2f;
-      padding:16px 18px;
-      border-radius:14px;
-      text-decoration:none;
-      color:#f2f2f2;
-      background:#0f0f12;
-      font-weight:bold;
-      min-width:160px;
-      text-align:center;
-      box-sizing:border-box;
-    }
-
-    .nav a:hover{
-      border-color:#f2f2f2;
-    }
-
-    footer{
-      margin-top:22px;
-      font-size:12px;
-      color:#888;
-    }
-
-    /* Logo styling */
-    .logo{
-      width:120px;
-      margin-bottom:14px;
-      opacity:0.95;
-      display:inline-block;
-    }
-
-    @media (max-width:600px){
-      body{background-attachment:scroll;}
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
-  <div class="wrap">
-    <div class="container">
-
-      <img class="logo" src="logo1.png" alt="Valiant Guardian Ministries Logo">
-
+<body style="--page-bg: url('bg-haven.jpg');">
+  <main class="site-shell">
+    <section class="hero">
+      <img class="brand-mark" src="logo1.png" alt="Valiant Guardian Ministries Logo">
       <h1>The Haven</h1>
       <p class="subtitle">Valiant Guardian Ministries</p>
+    </section>
 
-      <div class="nav">
-        <a href="offering.html">Offering</a>
-        <a href="oath.html">Oath</a>
-        <a href="forge.html">Forge</a>
-        <a href="training-ground.html">Training Ground</a>
-        <a href="armory.html">Armory</a>
+    <section class="section">
+      <div class="grid grid-3">
+        <a class="entry-card" href="offering.html">
+          <h3>Offering</h3>
+        </a>
+        <a class="entry-card" href="oath.html">
+          <h3>Oath</h3>
+        </a>
+        <a class="entry-card" href="forge.html">
+          <h3>Forge</h3>
+        </a>
+        <a class="entry-card" href="training-ground.html">
+          <h3>Training Ground</h3>
+        </a>
+        <a class="entry-card" href="armory.html">
+          <h3>Armory</h3>
+        </a>
       </div>
+    </section>
 
-      <footer>© 2026 Valiant Guardian Ministries</footer>
-
-    </div>
-  </div>
+    <footer class="site-footer">© 2026 Valiant Guardian Ministries</footer>
+  </main>
 </body>
 </html>

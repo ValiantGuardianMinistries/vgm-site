@@ -4,117 +4,38 @@
   <meta charset="utf-8">
   <title>Training Ground • VGM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      color:#f2f2f2;
-
-      /* Background image */
-      background-image:url("bg-training.jpg");
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
-      background-attachment:fixed;
-    }
-
-    /* Dark overlay for readability */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,0.72);
-      pointer-events:none;
-      z-index:-1;
-    }
-
-    .wrap{
-      max-width:980px;
-      margin:0 auto;
-      padding:26px;
-      box-sizing:border-box;
-    }
-
-    .nav a{
-      display:inline-block;
-      margin:6px 8px 0 0;
-      padding:10px 14px;
-      border:2px solid #2a2a2f;
-      border-radius:999px;
-      text-decoration:none;
-      color:#f2f2f2;
-      background:#0f0f12;
-      font-weight:bold;
-    }
-
-    .nav a:hover{border-color:#f2f2f2;}
-
-    .card{
-      margin-top:18px;
-      border:2px solid #2a2a2f;
-      border-radius:18px;
-      background:#111114;
-      padding:18px;
-      box-sizing:border-box;
-    }
-
-    h1,h2{margin:0 0 10px;}
-    p{color:#bdbdbd;line-height:1.6;}
-    .muted{color:#8f8f8f;}
-
-    .pill{
-      display:inline-block;
-      margin:6px 8px 0 0;
-      padding:10px 14px;
-      border:2px solid #2a2a2f;
-      border-radius:999px;
-      background:#0f0f12;
-      text-decoration:none;
-      color:#f2f2f2;
-      font-weight:bold;
-    }
-
-    .pill:hover{border-color:#f2f2f2;}
-
-    @media (max-width:600px){
-      body{background-attachment:scroll;}
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
-  <div class="wrap">
-
-    <div class="nav">
+<body style="--page-bg: url('bg-training.jpg');">
+  <main class="site-shell">
+    <nav class="top-nav" aria-label="Primary">
       <a href="index.html">← The Haven</a>
       <a href="oath.html">Oath</a>
       <a href="forge.html">Forge</a>
       <a href="offering.html">Offering</a>
       <a href="armory.html">Armory</a>
-    </div>
+    </nav>
 
-    <div class="card">
+    <section class="hero">
       <h1>The Training Ground</h1>
-      <p class="muted">
-        Valiant Guardian Kids — formation for the next generation
-      </p>
-    </div>
+      <p class="subtitle">Valiant Guardian Kids — formation for the next generation</p>
+    </section>
 
-    <div class="card">
+    <section class="section stack">
       <h2>What Is the Training Ground?</h2>
       <p>
         The Training Ground is the kids-focused branch of Valiant Guardian Ministries.
         It exists to help parents disciple their children through Scripture, virtue,
         courage, and Christ-centered formation.
       </p>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="section stack">
       <h2>Coming Soon</h2>
-      <p>
-        We are actively developing:
-      </p>
+      <p>We are actively developing:</p>
       <ul>
         <li>The Valiant Guardian Kids Show</li>
         <li>Parent-guided devotionals</li>
@@ -124,8 +45,7 @@
       <p class="muted">
         Resources will be released intentionally, with quality and faithfulness as the priority.
       </p>
-    </div>
-
-  </div>
+    </section>
+  </main>
 </body>
 </html>
