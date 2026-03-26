@@ -241,6 +241,10 @@ li {
   color: var(--text-soft);
 }
 
+.room-link .muted {
+  opacity: 0.5;
+}
+
 .room-grid,
 .tiles,
 .grid,
@@ -332,6 +336,7 @@ li {
 }
 
 .forge-subgrid {
+  display: block;
   margin-top: 0;
   max-height: 0;
   opacity: 0;
@@ -345,6 +350,48 @@ li {
   opacity: 1;
   transform: translateY(0);
   margin-top: 0.7rem;
+}
+
+.forge-subgrid-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(0.75rem, 1.4vw, 1.15rem);
+}
+
+.forge-subgrid-items > .sub-tile:nth-child(n + 4) {
+  display: none;
+}
+
+.forge-more-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.7rem;
+}
+
+.forge-more-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.56rem 0.95rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(6, 10, 16, 0.45));
+  border: 1px solid rgba(187, 197, 212, 0.3);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.forge-more-link:hover,
+.forge-more-link:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(var(--room-light), 0.62);
+  box-shadow: 0 0 0 1px rgba(var(--room-light), 0.2), 0 10px 24px rgba(2, 6, 11, 0.45);
+  outline: none;
 }
 
 .inner-zone {
