@@ -442,6 +442,35 @@ iframe {
   border-radius: 12px;
 }
 
+.vgm-card-actions {
+  margin-top: 0.82rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.vgm-watch-btn {
+  cursor: pointer;
+}
+
+.vgm-watch-btn[aria-expanded="true"] {
+  border-color: rgba(var(--room-light), 0.62);
+  box-shadow: 0 0 0 1px rgba(var(--room-light), 0.2), 0 10px 24px rgba(2, 6, 11, 0.45);
+}
+
+.video-slot {
+  margin-top: 0.85rem;
+}
+
+.video-slot[hidden] {
+  display: none;
+}
+
+.vgm-session-card.is-open {
+  border-color: rgba(var(--room-light), 0.62);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 28px 50px rgba(1, 4, 9, 0.58);
+}
+
 .widget-wrap {
   margin-top: 0.9rem;
   border-radius: 14px;
