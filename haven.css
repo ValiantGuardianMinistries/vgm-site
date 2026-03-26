@@ -39,6 +39,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* Perf follow-up: consider page-scoped fallback for video-heavy pages if fixed backgrounds still cause jank. */
   background-attachment: fixed;
 }
 
@@ -54,6 +55,7 @@ body::before {
   background:
     linear-gradient(0deg, rgba(2, 5, 10, 0.34), rgba(2, 5, 10, 0.34)),
     radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.05), transparent 52%);
+  /* Perf follow-up: test reducing blend effects on media-heavy pages if scrolling/playback stutters. */
   mix-blend-mode: soft-light;
   opacity: 0.6;
 }
@@ -421,6 +423,8 @@ body.room-forge .forge-trigger::before {
   width: 100%;
   padding-top: 56.25%;
   margin-top: 0.9rem;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .video iframe {
@@ -429,7 +433,7 @@ body.room-forge .forge-trigger::before {
   width: 100%;
   height: 100%;
   border: 0;
-  border-radius: 12px;
+  border-radius: 0;
 }
 
 iframe {
