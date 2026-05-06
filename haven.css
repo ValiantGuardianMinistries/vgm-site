@@ -100,6 +100,12 @@ body.room-offering {
   --room-secondary: 137, 117, 96;
 }
 
+@media (max-width: 900px), (prefers-reduced-motion: reduce) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
 .site-shell {
   width: min(1120px, 100% - 3rem);
   margin: 0 auto;
