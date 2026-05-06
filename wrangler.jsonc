@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers static site configuration
+  // See: https://developers.cloudflare.com/workers/static-assets/
+  "name": "vgm-site",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "."
+  }
+}

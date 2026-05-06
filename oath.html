@@ -2,150 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Oath • VGM</title>
+  <title>Oath | About Valiant Guardian Ministries</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      color:#f2f2f2;
-
-      /* Background image */
-      background-image:url("bg-oath.jpg");
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
-      background-attachment:fixed;
+  <meta name="description" content="Learn the mission, story, core values, and contact details for Valiant Guardian Ministries, a discipleship ministry rooted in Scripture, virtue, and faithful formation.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://vgm-site.pages.dev/oath.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Valiant Guardian Ministries">
+  <meta property="og:title" content="Oath | About Valiant Guardian Ministries">
+  <meta property="og:description" content="Learn the mission, story, core values, and contact details for Valiant Guardian Ministries, a discipleship ministry rooted in Scripture, virtue, and faithful formation.">
+  <meta property="og:url" content="https://vgm-site.pages.dev/oath.html">
+  <meta property="og:image" content="https://vgm-site.pages.dev/logo.png">
+  <meta property="og:image:alt" content="Valiant Guardian Ministries logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Oath | About Valiant Guardian Ministries">
+  <meta name="twitter:description" content="Learn the mission, story, core values, and contact details for Valiant Guardian Ministries, a discipleship ministry rooted in Scripture, virtue, and faithful formation.">
+  <meta name="twitter:image" content="https://vgm-site.pages.dev/logo.png">
+  <meta name="theme-color" content="#090d13">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="haven.css">
+  <script src="haven.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://vgm-site.pages.dev/#organization",
+          "name": "Valiant Guardian Ministries",
+          "url": "https://vgm-site.pages.dev/",
+          "logo": "https://vgm-site.pages.dev/logo.png",
+          "email": "mailto:thevaliantguardianproject@gmail.com",
+          "sameAs": [
+            "https://www.instagram.com/valiant_guardian_ministries/",
+            "https://www.facebook.com/profile.php?id=61576155749165",
+            "https://www.tiktok.com/@valiant_guardian",
+            "https://www.youtube.com/@TheValiantGuardian"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://vgm-site.pages.dev/#website",
+          "url": "https://vgm-site.pages.dev/",
+          "name": "Valiant Guardian Ministries",
+          "publisher": {
+            "@id": "https://vgm-site.pages.dev/#organization"
+          }
+        },
+        {
+          "@type": "AboutPage",
+          "@id": "https://vgm-site.pages.dev/oath.html#webpage",
+          "url": "https://vgm-site.pages.dev/oath.html",
+          "name": "Oath",
+          "description": "Learn the mission, story, core values, and contact details for Valiant Guardian Ministries, a discipleship ministry rooted in Scripture, virtue, and faithful formation.",
+          "isPartOf": {
+            "@id": "https://vgm-site.pages.dev/#website"
+          },
+          "about": {
+            "@id": "https://vgm-site.pages.dev/#organization"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "The Haven",
+              "item": "https://vgm-site.pages.dev/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Oath",
+              "item": "https://vgm-site.pages.dev/oath.html"
+            }
+          ]
+        }
+      ]
     }
-
-    /* Dark overlay for readability */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,0.72);
-      pointer-events:none;
-      z-index:-1;
-    }
-
-    .wrap{
-      max-width:980px;
-      margin:0 auto;
-      padding:26px;
-      box-sizing:border-box;
-    }
-
-    .nav a{
-      display:inline-block;
-      margin:6px 8px 0 0;
-      padding:10px 14px;
-      border:2px solid #2a2a2f;
-      border-radius:999px;
-      text-decoration:none;
-      color:#f2f2f2;
-      background:#0f0f12;
-      font-weight:bold;
-    }
-
-    .nav a:hover{border-color:#f2f2f2;}
-
-    .card{
-      margin-top:18px;
-      border:2px solid #2a2a2f;
-      border-radius:18px;
-      background:#111114;
-      padding:18px;
-      box-sizing:border-box;
-    }
-
-    h1,h2{margin:0 0 10px;}
-    p,li{color:#bdbdbd;line-height:1.65;}
-
-    .muted{color:#8f8f8f;}
-
-    .grid{
-      display:grid;
-      gap:14px;
-      grid-template-columns:1.2fr .8fr;
-    }
-
-    @media (max-width:900px){
-      .grid{grid-template-columns:1fr;}
-    }
-
-    @media (max-width:600px){
-      body{background-attachment:scroll;}
-    }
-
-    .pill{
-      display:inline-block;
-      margin:6px 8px 0 0;
-      padding:10px 14px;
-      border:2px solid #2a2a2f;
-      border-radius:999px;
-      background:#0f0f12;
-      text-decoration:none;
-      color:#f2f2f2;
-      font-weight:bold;
-    }
-
-    .pill:hover{border-color:#f2f2f2;}
-
-    input,textarea{
-      width:100%;
-      padding:10px;
-      border-radius:12px;
-      border:2px solid #2a2a2f;
-      background:#0f0f12;
-      color:#f2f2f2;
-      font-size:14px;
-      box-sizing:border-box;
-    }
-
-    label{
-      display:block;
-      margin:10px 0 6px;
-      color:#d6d6d6;
-    }
-
-    button{
-      margin-top:12px;
-      padding:12px 16px;
-      border-radius:14px;
-      border:2px solid #2a2a2f;
-      background:#0f0f12;
-      color:#f2f2f2;
-      font-weight:bold;
-      cursor:pointer;
-    }
-
-    button:hover{border-color:#f2f2f2;}
-
-    iframe{
-      border-radius:12px;
-      border:none;
-    }
-  </style>
+  </script>
 </head>
 
-<body>
-  <div class="wrap">
+<body class="room-oath">
+  <main class="site-shell">
+    <header class="room-top">
+      <div class="top-nav">
+        <a href="index.html">← The Haven</a>
+        <a href="offering.html">Offering</a>
+        <a href="forge.html">Forge</a>
+        <a href="training-ground.html">Training Ground</a>
+        <a href="armory.html">Armory</a>
+      </div>
+    </header>
 
-    <div class="nav">
-      <a href="index.html">← The Haven</a>
-      <a href="offering.html">Offering</a>
-      <a href="forge.html">Forge</a>
-      <a href="training-ground.html">Training Ground</a>
-      <a href="armory.html">Armory</a>
-    </div>
-
-    <div class="card">
+    <section class="entry">
       <h1>Oath</h1>
       <p class="muted">About Valiant Guardian Ministries • Mission • Vision • Story • Contact</p>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="zone">
       <h2>Vision & Mission</h2>
 
       <p><strong>Vision & Mission:</strong> A generation of guardians, fortified by the Word, valiantly standing firm, building Christ’s kingdom into communities.</p>
@@ -160,12 +121,12 @@
       </p>
 
       <p>
-        Empowered by the Holy Spirit, VG does immeasurably more than can be imagined (Ephesians 3:20)…  
+        Empowered by the Holy Spirit, VG does immeasurably more than can be imagined (Ephesians 3:20)…
         <em>(content preserved exactly as you wrote)</em>
       </p>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="zone">
       <h2>Story</h2>
       <p>
         The valiant guardian in its essence has existed for a while…
@@ -176,9 +137,9 @@
       <p>
         Doing some research, I learned that Guardians are named in Hebrew as Omeneen…
       </p>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="zone">
       <h2>Core Values</h2>
       <ol>
         <li>Quality and Qualified</li>
@@ -186,15 +147,15 @@
         <li>Boldly Gentle</li>
         <li>Kingdom Community</li>
       </ol>
-    </div>
+    </section>
 
-    <div class="card" id="contact">
+    <section class="zone" id="contact">
       <h2>Contact</h2>
       <p>Email: <strong>thevaliantguardianproject@gmail.com</strong></p>
 
-      <div class="grid">
-        <div class="card" style="margin-top:0;">
-          <h2 style="font-size:16px;">Inquiry Form</h2>
+      <div class="grid split-grid">
+        <div class="zone inner-zone">
+          <h3 style="font-size:16px;">Inquiry Form</h3>
 
           <form action="https://formspree.io/f/xdalkpjr" method="POST">
             <label>Name</label>
@@ -210,24 +171,26 @@
           </form>
         </div>
 
-        <div class="card" style="margin-top:0;">
-          <h2 style="font-size:16px;">Connect</h2>
+        <div class="zone inner-zone">
+          <h3 style="font-size:16px;">Connect</h3>
 
-          <a class="pill" href="https://www.instagram.com/valiant_guardian_ministries/" target="_blank">Instagram</a>
-          <a class="pill" href="https://www.facebook.com/profile.php?id=61576155749165" target="_blank">Facebook</a>
-          <a class="pill" href="https://www.tiktok.com/@valiant_guardian" target="_blank">TikTok</a>
-          <a class="pill" href="https://www.youtube.com/@TheValiantGuardian" target="_blank">YouTube</a>
+          <a class="pill" href="https://www.instagram.com/valiant_guardian_ministries/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="pill" href="https://www.facebook.com/profile.php?id=61576155749165" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a class="pill" href="https://www.tiktok.com/@valiant_guardian" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a class="pill" href="https://www.youtube.com/@TheValiantGuardian" target="_blank" rel="noopener noreferrer">YouTube</a>
 
-          <h2 style="font-size:16px;margin-top:18px;">Podcast</h2>
+          <h3 style="font-size:16px;margin-top:18px;">Podcast</h3>
           <iframe
             src="https://open.spotify.com/embed/show/5xfR3QQQeSJYBk11sZHuW1/video"
+            title="Valiant Guardian Ministries podcast on Spotify"
             width="100%"
             height="351"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy">
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
           </iframe>
 
-          <h2 style="font-size:16px;margin-top:18px;">Board Members</h2>
+          <h3 style="font-size:16px;margin-top:18px;">Board Members</h3>
           <ul>
             <li>Tyler Smith</li>
             <li>Nathan Call</li>
@@ -237,8 +200,8 @@
           </ul>
         </div>
       </div>
-    </div>
+    </section>
 
-  </div>
+  </main>
 </body>
 </html>

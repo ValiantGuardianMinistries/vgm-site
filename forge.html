@@ -2,138 +2,185 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Forge • VGM</title>
+  <title>The Forge | Teaching and Discipleship Resources</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      color:#f2f2f2;
-
-      background-image:url("bg-forge.jpg");
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
-      background-attachment:fixed;
+  <meta name="description" content="Explore The Forge from Valiant Guardian Ministries for video lessons, articles, and devotionals focused on Scripture, theology, discipleship, and cultural engagement.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://vgm-site.pages.dev/forge.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Valiant Guardian Ministries">
+  <meta property="og:title" content="The Forge | Teaching and Discipleship Resources">
+  <meta property="og:description" content="Explore The Forge from Valiant Guardian Ministries for video lessons, articles, and devotionals focused on Scripture, theology, discipleship, and cultural engagement.">
+  <meta property="og:url" content="https://vgm-site.pages.dev/forge.html">
+  <meta property="og:image" content="https://vgm-site.pages.dev/logo.png">
+  <meta property="og:image:alt" content="Valiant Guardian Ministries logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Forge | Teaching and Discipleship Resources">
+  <meta name="twitter:description" content="Explore The Forge from Valiant Guardian Ministries for video lessons, articles, and devotionals focused on Scripture, theology, discipleship, and cultural engagement.">
+  <meta name="twitter:image" content="https://vgm-site.pages.dev/logo.png">
+  <meta name="theme-color" content="#090d13">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="haven.css">
+  <script src="haven.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://vgm-site.pages.dev/#organization",
+          "name": "Valiant Guardian Ministries",
+          "url": "https://vgm-site.pages.dev/",
+          "logo": "https://vgm-site.pages.dev/logo.png"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://vgm-site.pages.dev/#website",
+          "url": "https://vgm-site.pages.dev/",
+          "name": "Valiant Guardian Ministries",
+          "publisher": {
+            "@id": "https://vgm-site.pages.dev/#organization"
+          }
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://vgm-site.pages.dev/forge.html#webpage",
+          "url": "https://vgm-site.pages.dev/forge.html",
+          "name": "The Forge",
+          "description": "Explore The Forge from Valiant Guardian Ministries for video lessons, articles, and devotionals focused on Scripture, theology, discipleship, and cultural engagement.",
+          "isPartOf": {
+            "@id": "https://vgm-site.pages.dev/#website"
+          },
+          "about": {
+            "@id": "https://vgm-site.pages.dev/#organization"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "The Haven",
+              "item": "https://vgm-site.pages.dev/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "The Forge",
+              "item": "https://vgm-site.pages.dev/forge.html"
+            }
+          ]
+        }
+      ]
     }
-
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,0.72);
-      pointer-events:none;
-      z-index:-1;
-    }
-
-    .wrap{
-      max-width:1000px;
-      margin:0 auto;
-      padding:26px;
-      box-sizing:border-box;
-    }
-
-    .nav a{
-      display:inline-block;
-      margin:6px 8px 0 0;
-      padding:10px 14px;
-      border:2px solid #2a2a2f;
-      border-radius:999px;
-      text-decoration:none;
-      color:#f2f2f2;
-      background:#0f0f12;
-      font-weight:bold;
-    }
-
-    .nav a:hover{border-color:#f2f2f2;}
-
-    .card{
-      margin-top:18px;
-      border:2px solid #2a2a2f;
-      border-radius:18px;
-      background:#111114;
-      padding:18px;
-      box-sizing:border-box;
-    }
-
-    h1,h2{margin:0 0 10px;}
-    p{color:#bdbdbd;line-height:1.6;}
-    .muted{color:#8f8f8f;}
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-      gap:16px;
-      margin-top:10px;
-    }
-
-    .tile{
-      border:2px solid #2a2a2f;
-      border-radius:16px;
-      padding:18px;
-      background:#0f0f12;
-      text-decoration:none;
-      color:#f2f2f2;
-      display:block;
-    }
-
-    .tile:hover{border-color:#f2f2f2;}
-
-    .tile h2{
-      margin:0 0 8px;
-      font-size:20px;
-    }
-
-    @media (max-width:600px){
-      body{background-attachment:scroll;}
-    }
-  </style>
+  </script>
 </head>
 
-<body>
-  <div class="wrap">
+<body class="room-forge">
+  <main class="site-shell">
+    <header class="room-top">
+      <div class="top-nav">
+        <a href="index.html">← The Haven</a>
+        <a href="oath.html">Oath</a>
+        <a href="offering.html">Offering</a>
+        <a href="training-ground.html">Training Ground</a>
+        <a href="armory.html">Armory</a>
+      </div>
+    </header>
 
-    <div class="nav">
-      <a href="index.html">← The Haven</a>
-      <a href="oath.html">Oath</a>
-      <a href="offering.html">Offering</a>
-      <a href="training-ground.html">Training Ground</a>
-      <a href="armory.html">Armory</a>
-    </div>
-
-    <div class="card">
+    <section class="entry">
       <h1>The Forge</h1>
       <p class="muted">
         Teaching, training, and formation through Scripture, theology, and cultural engagement.
       </p>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="zone">
       <h2>Content Areas</h2>
 
-      <div class="grid">
-        <a class="tile" href="forge-videos.html">
-          <h2>Video Lessons</h2>
-          <p class="muted">
-            Teaching series, discipleship lessons, and biblical formation.
-          </p>
-        </a>
+      <div class="forge-stack">
+        <article class="forge-node">
+          <button class="forge-trigger" type="button" aria-expanded="false" aria-controls="forge-videos-grid">
+            <span>
+              <h3>Video Lessons</h3>
+              <p class="muted">
+                Teaching series, discipleship lessons, and biblical formation.
+              </p>
+            </span>
+          </button>
+          <div class="forge-subgrid" id="forge-videos-grid">
+            <div class="forge-subgrid-items">
+              <a class="sub-tile" href="videos-vgm.html">
+                <h3>VGM Series</h3>
+                <p class="muted">Core discipleship and formation lessons.</p>
+              </a>
+              <a class="sub-tile" href="videos-theology.html">
+                <h3>Theology</h3>
+                <p class="muted">Doctrine, Scripture deep dives, foundations.</p>
+              </a>
+              <a class="sub-tile" href="videos-jv.html">
+                <h3>Jesus vs... </h3>
+                <p class="muted">Clarifying courage, virtue, and faithful action.</p>
+              </a>
+            </div>
+            <div class="forge-more-wrap">
+              <a class="forge-more-link" href="forge-videos.html">See More</a>
+            </div>
+          </div>
+        </article>
 
-        <a class="tile" href="forge-articles.html">
-          <h2>Articles</h2>
-          <p class="muted">
-            Written resources for deeper study and reflection.
-          </p>
-        </a>
+        <article class="forge-node">
+          <button class="forge-trigger" type="button" aria-expanded="false" aria-controls="forge-articles-grid">
+            <span>
+              <h3>Articles</h3>
+              <p class="muted">
+                Written resources for deeper study and reflection.
+              </p>
+            </span>
+          </button>
+          <div class="forge-subgrid" id="forge-articles-grid">
+            <div class="forge-subgrid-items">
+              <a class="sub-tile" href="forge-articles.html">
+                <h3>Articles</h3>
+                <p class="muted">
+                  Written resources for deeper study and reflection.
+                </p>
+              </a>
+            </div>
+            <div class="forge-more-wrap">
+              <a class="forge-more-link" href="forge-articles.html">See More</a>
+            </div>
+          </div>
+        </article>
 
-        <a class="tile" href="forge-devotionals.html">
-          <h2>Devotionals</h2>
-          <p class="muted">Daily expository devotionals.</p>
-        </a>
+        <article class="forge-node">
+          <button class="forge-trigger" type="button" aria-expanded="false" aria-controls="forge-devotionals-grid">
+            <span>
+              <h3>Devotionals</h3>
+              <p class="muted">Daily expository devotionals.</p>
+            </span>
+          </button>
+          <div class="forge-subgrid" id="forge-devotionals-grid">
+            <div class="forge-subgrid-items">
+              <a class="sub-tile" href="forge-devotionals.html">
+                <h3>Devotionals</h3>
+                <p class="muted">Daily expository devotionals.</p>
+              </a>
+            </div>
+            <div class="forge-more-wrap">
+              <a class="forge-more-link" href="forge-devotionals.html">See More</a>
+            </div>
+          </div>
+        </article>
       </div>
-    </div>
+    </section>
 
-  </div>
+  </main>
 </body>
 </html>

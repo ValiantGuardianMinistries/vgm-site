@@ -1,42 +1,55 @@
-# vgm-site
+# VGM Site Documentation Hub
 
-Static website for **Valiant Guardian Ministries** — a discipleship ministry focused on Scripture, virtue, and faithful formation.
+This repository contains the **Valiant Guardian Ministries** static website (`.html`, `.css`, `.js`, images).
 
-Published via GitHub Pages.
+There is no framework setup and no npm build pipeline. Edit files directly, preview locally, then ship through GitHub + Cloudflare.
 
-## Pages
+## Read In This Order
 
-| File | Page |
-|---|---|
-| `index.html` | The Haven (home) |
-| `offering.html` | Offering / Donations |
-| `oath.html` | About, Contact, Podcast |
-| `forge.html` | Teaching hub |
-| `forge-videos.html` | Video lessons |
-| `forge-articles.html` | Articles |
-| `forge-devotionals.html` | Devotionals |
-| `training-ground.html` | Kids ministry |
-| `armory.html` | Merch (coming soon) |
+1. [Getting Started](docs/getting-started.md) (required)
+2. [Deployment Workflow](docs/deployment-workflow.md) (required)
+3. [Troubleshooting](docs/troubleshooting.md) (use when blocked)
+4. [Cloudflare and Domain Overview](docs/cloudflare-and-domain-overview.md) (hosting + DNS context)
+5. [Git and GitHub Basics](docs/git-and-github-basics.md) (optional refresher)
+6. [AI Help Prompts](docs/ai-help-prompts.md) (optional helper prompts)
 
-## Preview Locally
-
-No build step needed. Just serve the files with Python:
+## Quick Contributor Flow
 
 ```bash
-cd vgm-site
+git switch main
+git pull origin main
+git switch -c content/short-description
+# edit files
 python3 -m http.server 8080
+# preview at http://localhost:8080
+git add .
+git commit -m "Describe the change"
+git push -u origin content/short-description
 ```
 
-Then open [http://localhost:8080](http://localhost:8080) in your browser.
+Then in GitHub:
 
-### Preview on Mobile
+1. Open a Pull Request into `main`.
+2. Review file changes and preview deployment.
+3. Merge after approval/checks.
+4. Delete the branch in GitHub.
 
-As long as your phone and computer are on the same Wi-Fi network:
+After merge, sync locally:
 
-1. Find your local IP:
-   ```bash
-   ipconfig getifaddr en0
-   ```
-2. On your phone's browser, go to `http://YOUR_IP:8080`
-   - Use `http://` explicitly — not `https://`
-   - If Safari auto-upgrades to HTTPS, try Chrome on your phone instead
+```bash
+git switch main
+git pull origin main
+git branch -d content/short-description
+```
+
+## Current Repo Signals
+
+- Static site files live in repo root.
+- `wrangler.jsonc` exists and serves assets from `"directory": "."`.
+- Default branch appears to be `main`.
+
+Dashboard checks still required:
+
+- Confirm Cloudflare production branch.
+- Confirm active live-hosting source (Cloudflare vs GitHub Pages).
+- Confirm connected custom domains.
