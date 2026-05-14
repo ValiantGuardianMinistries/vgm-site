@@ -50,6 +50,8 @@ git switch main
 git pull origin main
 git switch -c content/short-description
 # edit files
+npm install
+npm run build
 python3 -m http.server 8080
 git add .
 git commit -m "Describe the change"

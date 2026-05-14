@@ -47,8 +47,9 @@ Likely causes:
 Safe checks:
 
 1. Review `wrangler.jsonc` (`assets.directory` currently `.`).
-2. Confirm `index.html` exists at repo root.
-3. Confirm static assets were committed and pushed.
+2. Run `npm run build` and confirm the generated root pages were updated.
+3. Confirm `forge-devotionals.html`, `forge-articles.html`, and the `articles/` or `devotionals/` folders exist after the build.
+4. Confirm static assets and content files were committed and pushed.
 
 When not to panic:
 

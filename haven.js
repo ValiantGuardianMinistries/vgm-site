@@ -116,7 +116,76 @@ function initVgmVideoCards() {
   });
 }
 
+function initDevotionalBrowser() {
+  var browser = document.querySelector("[data-devo-browser]");
+  if (!browser) {
+    return;
+  }
+
+  var categoryButtons = Array.from(browser.querySelectorAll("[data-devo-category]"));
+  var bookButtons = Array.from(browser.querySelectorAll("[data-devo-book]"));
+  var bookPanels = Array.from(browser.querySelectorAll("[data-devo-books-panel]"));
+  var chapterPanels = Array.from(browser.querySelectorAll("[data-devo-chapters-panel]"));
+
+  function setPressedState(buttons, activeValue, attributeName) {
+    buttons.forEach(function (button) {
+      var isActive = button.getAttribute(attributeName) === activeValue;
+      button.setAttribute("aria-pressed", isActive ? "true" : "false");
+      button.classList.toggle("is-active", isActive);
+    });
+  }
+
+  function showChapters(book) {
+    chapterPanels.forEach(function (panel) {
+      var isActive = panel.getAttribute("data-devo-chapters-panel") === book;
+      panel.hidden = !isActive;
+      panel.classList.toggle("is-active", isActive);
+    });
+  }
+
+  function showBooks(category) {
+    bookPanels.forEach(function (panel) {
+      var isActive = panel.getAttribute("data-devo-books-panel") === category;
+      panel.hidden = !isActive;
+      panel.classList.toggle("is-active", isActive);
+    });
+
+    var matchingBooks = bookButtons.filter(function (button) {
+      return button.getAttribute("data-devo-category-parent") === category;
+    });
+
+    if (!matchingBooks.length) {
+      chapterPanels.forEach(function (panel) {
+        panel.hidden = true;
+        panel.classList.remove("is-active");
+      });
+      return;
+    }
+
+    var firstBook = matchingBooks[0].getAttribute("data-devo-book");
+    setPressedState(bookButtons, firstBook, "data-devo-book");
+    showChapters(firstBook);
+  }
+
+  categoryButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var category = button.getAttribute("data-devo-category");
+      setPressedState(categoryButtons, category, "data-devo-category");
+      showBooks(category);
+    });
+  });
+
+  bookButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var book = button.getAttribute("data-devo-book");
+      setPressedState(bookButtons, book, "data-devo-book");
+      showChapters(book);
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   initForgeAccordion();
   initVgmVideoCards();
+  initDevotionalBrowser();
 });
