@@ -6,19 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Support Valiant Guardian Ministries through secure online giving and learn how generosity helps fund Scripture-rooted discipleship, teaching, and ministry formation.">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://vgm-site.pages.dev/offering.html">
+  <link rel="canonical" href="https://valiantguardianministries.org/offering">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Valiant Guardian Ministries">
   <meta property="og:title" content="Offering | Support Valiant Guardian Ministries">
   <meta property="og:description" content="Support Valiant Guardian Ministries through secure online giving and learn how generosity helps fund Scripture-rooted discipleship, teaching, and ministry formation.">
-  <meta property="og:url" content="https://vgm-site.pages.dev/offering.html">
-  <meta property="og:image" content="https://vgm-site.pages.dev/logo.png">
+  <meta property="og:url" content="https://valiantguardianministries.org/offering">
+  <meta property="og:image" content="https://valiantguardianministries.org/logo.png">
   <meta property="og:image:alt" content="Valiant Guardian Ministries logo">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Offering | Support Valiant Guardian Ministries">
   <meta name="twitter:description" content="Support Valiant Guardian Ministries through secure online giving and learn how generosity helps fund Scripture-rooted discipleship, teaching, and ministry formation.">
-  <meta name="twitter:image" content="https://vgm-site.pages.dev/logo.png">
+  <meta name="twitter:image" content="https://valiantguardianministries.org/logo.png">
   <meta name="theme-color" content="#090d13">
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -27,6 +27,44 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="haven.css">
+  <style>
+    /* Offering-page campaign button: uses the same condensed font and rounded
+       visual language as the Haven navigation, but stands out as a primary CTA. */
+    .giving-tuesday-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      max-width: 100%;
+      box-sizing: border-box;
+      margin-top: .5rem;
+      padding: .8rem 1.35rem;
+      border: 1px solid rgba(255,255,255,.38);
+      border-radius: 999px;
+      background: #e9dcc4;
+      color: #111720;
+      font: 700 1rem/1.2 'Barlow Condensed', Impact, sans-serif;
+      letter-spacing: .05em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background .15s ease, border-color .15s ease;
+    }
+    .giving-tuesday-button:hover {
+      background: #fff0d2;
+      color: #111720;
+      border-color: #fff0d2;
+    }
+    .giving-tuesday-button:focus-visible {
+      outline: 3px solid #f6d994;
+      outline-offset: 4px;
+    }
+    @media (max-width: 520px) {
+      .giving-tuesday-button { width: 100%; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .giving-tuesday-button { transition: none; }
+    }
+  </style>
   <script src="haven.js" defer></script>
   <script type="application/ld+json">
     {
@@ -34,56 +72,38 @@
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "https://vgm-site.pages.dev/#organization",
+          "@id": "https://valiantguardianministries.org/#organization",
           "name": "Valiant Guardian Ministries",
-          "url": "https://vgm-site.pages.dev/",
-          "logo": "https://vgm-site.pages.dev/logo.png",
-          "email": "mailto:thevaliantguardianproject@gmail.com"
+          "url": "https://valiantguardianministries.org/",
+          "logo": "https://valiantguardianministries.org/logo.png"
         },
         {
           "@type": "WebSite",
-          "@id": "https://vgm-site.pages.dev/#website",
-          "url": "https://vgm-site.pages.dev/",
+          "@id": "https://valiantguardianministries.org/#website",
+          "url": "https://valiantguardianministries.org/",
           "name": "Valiant Guardian Ministries",
-          "publisher": {
-            "@id": "https://vgm-site.pages.dev/#organization"
-          }
+          "publisher": { "@id": "https://valiantguardianministries.org/#organization" }
         },
         {
           "@type": "WebPage",
-          "@id": "https://vgm-site.pages.dev/offering.html#webpage",
-          "url": "https://vgm-site.pages.dev/offering.html",
+          "@id": "https://valiantguardianministries.org/offering#webpage",
+          "url": "https://valiantguardianministries.org/offering",
           "name": "Offering",
           "description": "Support Valiant Guardian Ministries through secure online giving and learn how generosity helps fund Scripture-rooted discipleship, teaching, and ministry formation.",
-          "isPartOf": {
-            "@id": "https://vgm-site.pages.dev/#website"
-          },
-          "about": {
-            "@id": "https://vgm-site.pages.dev/#organization"
-          }
+          "isPartOf": { "@id": "https://valiantguardianministries.org/#website" },
+          "about": { "@id": "https://valiantguardianministries.org/#organization" }
         },
         {
           "@type": "BreadcrumbList",
           "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "The Haven",
-              "item": "https://vgm-site.pages.dev/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Offering",
-              "item": "https://vgm-site.pages.dev/offering.html"
-            }
+            {"@type":"ListItem","position":1,"name":"The Haven","item":"https://valiantguardianministries.org/"},
+            {"@type":"ListItem","position":2,"name":"Offering","item":"https://valiantguardianministries.org/offering"}
           ]
         }
       ]
     }
   </script>
 </head>
-
 <body class="room-offering">
   <main class="site-shell">
     <header class="room-top">
@@ -98,44 +118,33 @@
 
     <section class="entry">
       <h1>Offering</h1>
-      <p class="muted">
-        Supporting the mission of Valiant Guardian Ministries
-      </p>
+      <p class="muted">Supporting the mission of Valiant Guardian Ministries</p>
     </section>
 
     <section class="zone">
       <h2>Why We Give</h2>
-      <p>
-        Thank you for supporting Valiant Guardian Ministries. Your generosity helps create
-        discipleship resources rooted in Scripture, virtue, and faithful formation.
-      </p>
-      <p>
-        Giving allows us to teach, train, and equip believers to stand firm in truth and
-        live courageously for Christ.
-      </p>
+      <p>Thank you for supporting Valiant Guardian Ministries. Your generosity helps create discipleship resources rooted in Scripture, virtue, and faithful formation.</p>
+      <p>Giving allows us to teach, train, and equip believers to stand firm in truth and live courageously for Christ.</p>
+    </section>
+
+    <!-- GivingTuesday campaign: points to the official VGM campaign page. -->
+    <section class="zone" aria-labelledby="giving-tuesday-heading">
+      <h2 id="giving-tuesday-heading">GivingTuesday 2026</h2>
+      <p>Help equip and sustain Valiant Guardian Ministries. Our $10,000 GivingTuesday goal supports biblical teaching, volunteer production equipment, and ongoing ministry operations.</p>
+      <a class="giving-tuesday-button" href="offering/giving-tuesday/" aria-label="Explore the VGM GivingTuesday 2026 campaign">
+        Explore Our GivingTuesday Campaign <span aria-hidden="true">&rarr;</span>
+      </a>
     </section>
 
     <section class="zone">
       <h2>Donate</h2>
-      <p class="muted">
-        Giving is handled securely through Donorbox.
-      </p>
-
+      <p class="muted">Giving is handled securely through Donorbox.</p>
       <script type="module" src="https://donorbox.org/widgets.js" async></script>
       <div class="widget-wrap">
-        <dbox-widget
-          campaign="valiant-guardian-ministries"
-          type="donation_form"
-          enable-auto-scroll="true"
-          style="display:block;max-width:100%;width:100%;">
-        </dbox-widget>
+        <dbox-widget campaign="valiant-guardian-ministries" type="donation_form" enable-auto-scroll="true" style="display:block;max-width:100%;width:100%;"></dbox-widget>
       </div>
-
-      <p class="muted" style="margin-top:14px;">
-        Prefer to give by check or have questions? Visit <a href="oath.html" style="text-decoration:underline;">Oath</a> for contact information.
-      </p>
+      <p class="muted" style="margin-top:14px;">Prefer to give by check or have questions? Visit <a href="oath.html" style="text-decoration:underline;">Oath</a> for contact information.</p>
     </section>
-
   </main>
 </body>
 </html>
