@@ -20,3 +20,7 @@ npm run build
 ```
 
 Deployment requires your real account configuration. Placeholder values intentionally prevent `npm run deploy` from publishing an unconfigured application. Keep the separate content backup private and outside this repository.
+
+## Cloudflare build configuration
+
+Connect this branch to the `valiant-guardian-kids` Worker using root `/`, build command `npm run build`, and deploy command `npm run deploy`. Enable production builds for `vgk-cloudflare` and leave preview builds disabled. The first Git-triggered build replaces the starter Worker; existing content still needs its private backup restored and admin sign-in must be verified before changing Training Ground links.
