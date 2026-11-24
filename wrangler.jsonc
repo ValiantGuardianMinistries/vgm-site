@@ -26,8 +26,14 @@
     }
   ],
   "vars": {
-    "CF_ACCESS_TEAM_DOMAIN": "https://replace-me.cloudflareaccess.com",
-    "CF_ACCESS_AUD": "REPLACE_WITH_ACCESS_APPLICATION_AUD",
-    "ADMIN_EMAILS": ""
-  }
+    "CF_ACCESS_TEAM_DOMAIN": "https://cool-sound-f543.cloudflareaccess.com",
+    "CF_ACCESS_AUD": "fd770875cc67b87f8e2e2864a1802bb3cb31997901d80de7d81eafddd8798096",
+    "ADMIN_EMAILS": "thornox24@gmail.com"
+  },
+  "routes": [
+    {
+      "pattern": "kids.valiantguardianministries.org",
+      "custom_domain": true
+    }
+  ]
 }
