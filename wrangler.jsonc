@@ -1,9 +1,33 @@
 {
-  // Cloudflare Workers static site configuration
-  // See: https://developers.cloudflare.com/workers/static-assets/
-  "name": "vgm-site",
-  "compatibility_date": "2025-01-01",
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "valiant-guardian-kids",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
   "assets": {
-    "directory": "."
+    "directory": "public",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "vgk-content",
+      "database_id": "00000000-0000-4000-8000-000000000000",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "vgk-media"
+    }
+  ],
+  "vars": {
+    "CF_ACCESS_TEAM_DOMAIN": "https://replace-me.cloudflareaccess.com",
+    "CF_ACCESS_AUD": "REPLACE_WITH_ACCESS_APPLICATION_AUD",
+    "ADMIN_EMAILS": ""
   }
 }

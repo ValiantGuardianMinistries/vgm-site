@@ -1,0 +1,4 @@
+'use client';
+import {Heart} from 'lucide-react';
+import QuickAccess from './quick-access';
+export default function SiteHeader({audience}:{audience?:'boys'|'girls'}){const key=audience==='boys'?'vgb':audience==='girls'?'vgg':'vgk-shared',name=audience==='boys'?'Valiant Guardian Boys':audience==='girls'?'Valiant Guardian Girls':'Valiant Guardian Kids';return <header className="game-header"><a className="vgk-brand" href="/" aria-label="Valiant Guardian Kids home"><img src={`/art/${key}-logo.png`} alt={name}/></a><QuickAccess/><nav aria-label="Main navigation"><a href="/#world">Map</a><a href="/#library">Activities</a><a href="/?resource=Guardian%20Stories#library">Guardian Stories</a><a href="/?resource=Devotional#library">Devotionals</a><a href="/?resource=Printable#library">Printables</a><a href="/?resource=Episode#library">Watch</a></nav><a className="family-nav" href="/?audience=parents#library"><Heart size={18}/> Parents</a></header>}

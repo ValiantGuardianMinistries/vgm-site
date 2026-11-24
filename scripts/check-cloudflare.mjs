@@ -1,0 +1,13 @@
+import {readFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const config=JSON.parse(await readFile('wrangler.jsonc','utf8'));
+assert.notEqual(config.d1_databases[0].database_id,'00000000-0000-4000-8000-000000000000','Set the real D1 database ID before deployment.');
+assert.ok(config.vars.ADMIN_EMAILS,'Configure the approved admin email allowlist before deployment.');
+assert.ok(config.vars.CF_ACCESS_AUD&&!config.vars.CF_ACCESS_AUD.startsWith('REPLACE_'),'Set the Cloudflare Access application audience.');
+const issuer=new URL(config.vars.CF_ACCESS_TEAM_DOMAIN);
+assert.ok(issuer.protocol==='https:'&&/^[a-z0-9-]+\.cloudflareaccess\.com$/i.test(issuer.hostname)&&issuer.hostname!=='replace-me.cloudflareaccess.com','Set the actual Cloudflare Access team domain.');
+const built=JSON.parse(await readFile('dist/server/wrangler.json','utf8'));
+for(const name of ['ADMIN_EMAILS','CF_ACCESS_AUD','CF_ACCESS_TEAM_DOMAIN'])assert.equal(built.vars?.[name],config.vars[name],'Configuration changed after build; run npm run build again.');
+assert.equal(built.d1_databases?.[0]?.database_id,config.d1_databases[0].database_id,'Database configuration changed after build.');
+assert.equal(built.r2_buckets?.[0]?.bucket_name,config.r2_buckets[0].bucket_name,'Media configuration changed after build.');
+console.log('Deployment configuration passed. Admin requests require valid signed Access tokens.');

@@ -1,55 +1,22 @@
-# VGM Site Documentation Hub
+# Valiant Guardian Kids
 
-This repository contains the **Valiant Guardian Ministries** static website (`.html`, `.css`, `.js`, images).
+Standalone Cloudflare Workers edition of the existing VGK website.
 
-There is no framework setup and no npm build pipeline. Edit files directly, preview locally, then ship through GitHub + Cloudflare.
+This project lives on the `vgk-cloudflare` branch of `ValiantGuardianMinistries/vgm-site`. The main VGM website stays on `main`. Connect this branch to a separate Cloudflare Worker.
 
-## Read In This Order
+Start with [CLOUDFLARE_SETUP.md](CLOUDFLARE_SETUP.md). This source is prepared and locally checked; it is not a claim that a Cloudflare deployment or custom domain is already live.
 
-1. [Getting Started](docs/getting-started.md) (required)
-2. [Deployment Workflow](docs/deployment-workflow.md) (required)
-3. [Troubleshooting](docs/troubleshooting.md) (use when blocked)
-4. [Cloudflare and Domain Overview](docs/cloudflare-and-domain-overview.md) (hosting + DNS context)
-5. [Git and GitHub Basics](docs/git-and-github-basics.md) (optional refresher)
-6. [AI Help Prompts](docs/ai-help-prompts.md) (optional helper prompts)
+- Public browsing without visitor accounts or ChatGPT sign-in.
+- Cloudflare Access admin authentication with signed JWT verification and an adult email allowlist.
+- D1 content storage and aggregate analytics; private R2 attachments.
+- Hidden drafts and Locked resources; metadata-only Coming Soon previews.
+- Compact resource grid and complete weekly devotional templates.
 
-## Quick Contributor Flow
-
-```bash
-git switch main
-git pull origin main
-git switch -c content/short-description
-# edit files
-python3 -m http.server 8080
-# preview at http://localhost:8080
-git add .
-git commit -m "Describe the change"
-git push -u origin content/short-description
+```sh
+npm ci
+npm run check
+npm test
+npm run build
 ```
 
-Then in GitHub:
-
-1. Open a Pull Request into `main`.
-2. Review file changes and preview deployment.
-3. Merge after approval/checks.
-4. Delete the branch in GitHub.
-
-After merge, sync locally:
-
-```bash
-git switch main
-git pull origin main
-git branch -d content/short-description
-```
-
-## Current Repo Signals
-
-- Static site files live in repo root.
-- `wrangler.jsonc` exists and serves assets from `"directory": "."`.
-- Default branch appears to be `main`.
-
-Dashboard checks still required:
-
-- Confirm Cloudflare production branch.
-- Confirm active live-hosting source (Cloudflare vs GitHub Pages).
-- Confirm connected custom domains.
+Deployment requires your real account configuration. Placeholder values intentionally prevent `npm run deploy` from publishing an unconfigured application. Keep the separate content backup private and outside this repository.
