@@ -10,7 +10,7 @@
     "build": "vite build",
     "preview": "wrangler dev --config dist/server/wrangler.json --local",
     "check": "tsc --noEmit",
-    "test": "node tests/api.mjs && node tests/access.mjs",
+    "test": "node tests/api.mjs && node tests/access.mjs && node tests/executive.mjs",
     "configure": "node scripts/configure-cloudflare.mjs",
     "deploy": "node scripts/check-cloudflare.mjs && wrangler deploy --config dist/server/wrangler.json",
     "db:migrate": "wrangler d1 migrations apply DB --remote",
