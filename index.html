@@ -113,96 +113,25 @@
 
     <footer>
       <div>© 2026 Valiant Guardian Ministries</div>
-      <section id="vgm-privacy" aria-label="Optional advertising measurement" style="max-width:44rem;margin:1rem auto 0;padding:1rem;border:1px solid #536174;border-radius:8px;text-align:left;color:#e8edf4;font-size:0.95rem">
+      <section id="vgm-privacy" aria-label="Privacy choices" style="max-width:44rem;margin:1rem auto 0;padding:1rem;border:1px solid #536174;border-radius:8px;text-align:left;color:#e8edf4;font-size:0.95rem">
         <strong>Privacy choices</strong>
-        <p style="margin:.5rem 0">With your permission, we use Meta Pixel to measure visits to this public homepage and the performance of our ads. Meta may receive browser/device information, your IP address, page address and advertising identifiers, and may use cookies. We do not use this Pixel to track discipleship, children's activities, donations or accounts. You can decline or change your choice here at any time. See <a style="color:#d0dfff;text-decoration:underline" href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta's privacy policy</a>.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:.5rem">
-          <button type="button" id="vgm-pixel-allow" style="font:inherit;color:#e8edf4;background:#223042;border:1px solid #8794a8;border-radius:5px;padding:.45rem .8rem;cursor:pointer">Allow optional measurement</button>
-          <button type="button" id="vgm-pixel-deny" style="font:inherit;color:#e8edf4;background:#223042;border:1px solid #8794a8;border-radius:5px;padding:.45rem .8rem;cursor:pointer">Decline optional measurement</button>
-        </div>
-        <p id="vgm-pixel-status" role="status" style="margin:.5rem 0 0;color:#a9b3c1">Optional measurement is off until you allow it.</p>
+        <p style="margin:.5rem 0">Optional advertising measurement is paused while we review its use on this website. This page does not load Meta Pixel or send advertising events to Meta. Previously stored Meta measurement cookies for this site are cleared when this page loads.</p>
+        <p style="margin:.5rem 0">For privacy questions, contact <a style="color:#d0dfff;text-decoration:underline" href="mailto:thevaliantguardianproject@gmail.com">VGM</a>.</p>
+        <p id="vgm-pixel-status" role="status" style="margin:.5rem 0 0;color:#a9b3c1">Optional advertising measurement is off.</p>
       </section>
     </footer>
   </main>
   <script>
+    // Advertising measurement is paused. Clear only the prior optional Pixel
+    // preference and this site's first-party Meta measurement cookies.
     (function () {
       'use strict';
-      var id = '1555752579920771';
-      var key = 'vgm_optional_meta_measurement_v1';
-      var status = document.getElementById('vgm-pixel-status');
-      var allow = document.getElementById('vgm-pixel-allow');
-      var deny = document.getElementById('vgm-pixel-deny');
-      var started = false;
-      function preference() {
-        try {
-          var p = JSON.parse(localStorage.getItem(key));
-          return p && p.expires > Date.now() ? p.choice : null;
-        } catch (_) { return null; }
-      }
-      function save(choice) {
-        try { localStorage.setItem(key, JSON.stringify({choice:choice,expires:Date.now()+180*24*60*60*1000})); } catch (_) {}
-      }
-      function eligible() {
-        if (navigator.globalPrivacyControl === true) return false;
-        if (location.protocol !== 'https:' || !['valiantguardianministries.org','www.valiantguardianministries.org'].includes(location.hostname)) return false;
-        if (!['/','/index.html'].includes(location.pathname) || location.hash) return false;
-        // Only a standard Meta click identifier is accepted; arbitrary query
-        // strings and detailed referrers may contain private information.
-        var params = new URLSearchParams(location.search);
-        for (var pair of params) {
-          if (pair[0] !== 'fbclid' || !/^[A-Za-z0-9_-]{1,512}$/.test(pair[1])) return false;
-        }
-        if (document.referrer) {
-          try {
-            var ref = new URL(document.referrer);
-            if (ref.protocol !== 'https:' || ref.pathname !== '/' || ref.search || ref.hash) return false;
-          } catch (_) { return false; }
-        }
-        return true;
-      }
-      function start() {
-        if (started || !eligible()) return;
-        started = true;
-        !function(f,b,e,v,n,t,s){
-          if(f.fbq)return;
-          n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;
-          n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
-          t=b.createElement(e);t.async=!0;t.referrerPolicy='no-referrer';t.src=v;
-          s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
-        }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        window.fbq('set','autoConfig',false,id);
-        window.fbq('consent','grant');
-        window.fbq('init',id);
-        window.fbq('trackSingle',id,'PageView');
-      }
-      function removeCookies() {
-        ['_fbp','_fbc'].forEach(function(name){
-          ['', '; Domain=valiantguardianministries.org','; Domain=www.valiantguardianministries.org'].forEach(function(domain){
-            document.cookie=name+'=; Max-Age=0; Path=/; Secure; SameSite=Lax'+domain;
-          });
+      try { localStorage.removeItem('vgm_optional_meta_measurement_v1'); } catch (_) {}
+      ['_fbp','_fbc'].forEach(function (name) {
+        ['', '; Domain=valiantguardianministries.org', '; Domain=www.valiantguardianministries.org'].forEach(function (domain) {
+          document.cookie = name + '=; Max-Age=0; Path=/; Secure; SameSite=Lax' + domain;
         });
-      }
-      function show(choice) {
-        var gpc = navigator.globalPrivacyControl === true;
-        allow.disabled = gpc;
-        status.textContent = gpc ? 'Your browser privacy signal is respected. Optional measurement is off.' :
-          choice === 'allow' ? (eligible() ? 'Optional measurement allowed for this homepage.' : 'Preference saved. Measurement is off for this visit.') :
-          choice === 'deny' ? 'Optional measurement declined.' : 'Optional measurement is off until you allow it.';
-        if (choice === 'allow' && !gpc) start();
-      }
-      allow.addEventListener('click',function(){if(navigator.globalPrivacyControl===true)return;save('allow');show('allow');});
-      deny.addEventListener('click',function(){
-        save('deny');
-        if(started && window.fbq) window.fbq('consent','revoke');
-        removeCookies();
-        show('deny');
-        // Unload the third-party library when permission is withdrawn.
-        if (started) location.reload();
       });
-      var choice = preference();
-      if (choice !== 'allow' || navigator.globalPrivacyControl === true) removeCookies();
-      show(choice);
     }());
   </script>
 </body>
