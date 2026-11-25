@@ -1,9 +1,10 @@
+import {trustedAdminOrigin,withExecutiveCors,executivePreflight} from '@/lib/executive-cors';
 import {env} from 'cloudflare:workers';
-import {isAdmin,sameOrigin} from '@/lib/admin';
+import {isAdmin} from '@/lib/admin';
 export const dynamic='force-dynamic';
 const types:Record<string,string>={'application/pdf':'pdf','image/png':'png','image/jpeg':'jpg','image/webp':'webp','video/mp4':'mp4'};
-export async function POST(req:Request){
- if(!sameOrigin(req)||!await isAdmin())return Response.json({error:'Admin access required'},{status:403});
+async function saveContent(req:Request){
+ if(!trustedAdminOrigin(req)||!await isAdmin())return Response.json({error:'Admin access required'},{status:403});
  const mime=req.headers.get('content-type')||'', ext=types[mime];if(!ext)return Response.json({error:'Use PDF, PNG, JPG, WebP, or MP4.'},{status:400});
  const limit=25*1024*1024;if(Number(req.headers.get('content-length'))>limit)return Response.json({error:'Maximum file size is 25 MB.'},{status:413});
  const reader=req.body?.getReader();if(!reader)return Response.json({error:'No file supplied.'},{status:400});
@@ -13,3 +14,6 @@ export async function POST(req:Request){
  if(!valid)return Response.json({error:'The file contents do not match its type.'},{status:400});
  const key=crypto.randomUUID()+'.'+ext;await env.BUCKET!.put(key,bytes,{httpMetadata:{contentType:mime}});return Response.json({key});
 }
+
+export async function POST(req:Request){return withExecutiveCors(req,await saveContent(req));}
+export async function OPTIONS(req:Request){return executivePreflight(req,['POST']);}
