@@ -197,6 +197,8 @@
         if(started && window.fbq) window.fbq('consent','revoke');
         removeCookies();
         show('deny');
+        // Unload the third-party library when permission is withdrawn.
+        if (started) location.reload();
       });
       var choice = preference();
       if (choice !== 'allow' || navigator.globalPrivacyControl === true) removeCookies();
